@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "image": "https://images.squarespace-cdn.com/content/v1/5b913ac48f51305fb1c3545a/1561968038174-EJFCDQ94J43IOVGSE5SB/primary+care+physician",
+        "name": "Primary Care Doctor",
+        "price": 700,
+        "description": "A primary care physician is someone who treats minor illnesses,answers health questions,conducts health checkups etc."
+    },
+    {
+        "id": 2,
+        "image": "https://s3.envato.com/files/312025406/97_E39A0344.jpg",
+        "name": "Pediatricians Doctor",
+        "price": 300,
+        "description": "Pediatricians focus on treating children from birth to young adulthood. They may be a child’s primary care physician and have training in,well-baby and well-child visits,school or sports physicals,childhood vaccines"
+    },
+    {
+        "id": 3,
+        "image": "https://eldercareanswers.com/wp-content/uploads/2019/04/EC-Geriatric-Care.jpg",
+        "name": "Geriatric medicine Doctor",
+        "price": 500,
+        "description": "Geriatric medicine doctors, also called geriatricians, focus on care for older adults.the aging process,preventive care for older adults,the diagnosis and treatmentof diseases and conditions that affect older adults"
+    }
+]
