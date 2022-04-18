@@ -4,6 +4,8 @@ import { useSendEmailVerification, useSendPasswordResetEmail, useSignInWithEmail
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import GoogleLogin from '../GoogleLogin/GoogleLogin';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -15,6 +17,7 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
     const location = useLocation();
     const from = location.state?.from?.pathnam || '/home';
 
@@ -33,7 +36,16 @@ const Login = () => {
         signInWithEmailAndPassword(email, password)
     }
 
-
+    const resetPassword = async (event) => {
+        const email = handleEmailBlur;
+        if (email) {
+            await sendPasswordResetEmail();
+            toast('Sent email');
+        }
+        else if (!email) {
+            toast('please enter your email')
+        }
+    }
 
     return (
         <div>
@@ -60,8 +72,10 @@ const Login = () => {
                         Submit
                     </Button>
                 </Form>
-                <p>New to Doctor service?<Link className='text-danger text-decoration-none' to='/register'>please Register!!</Link></p>
+                <p>New to Doctor service?<Link className='text-primary text-decoration-none' to='/register'>please Register!!</Link></p>
+                <p>Forget password?<button onClick={resetPassword} className=' btn btn-link text-primary text-decoration-none pe-auto'>Reset password!!</button></p>
                 <GoogleLogin></GoogleLogin>
+                <ToastContainer />
             </div>
 
         </div>

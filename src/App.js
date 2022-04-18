@@ -8,6 +8,7 @@ import Register from './Pages/Login/Register/Register';
 import NotFound from './Pages/NotFound/NotFound';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import CheckOut from './Pages/Shared/CheckOut/CheckOut';
+import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path='/about' element={<About></About>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

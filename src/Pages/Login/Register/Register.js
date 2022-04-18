@@ -67,7 +67,7 @@ const Register = () => {
                         Submit
                     </Button>
                 </Form>
-                <p>Already have an account?<Link className='text-danger text-decoration-none' to='/login'>please Login!!</Link></p>
+                <p>Already have an account?<Link className='text-primary text-decoration-none' to='/login'>please Login!!</Link></p>
             </div>
         </div>
     );

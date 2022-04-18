@@ -19,5 +19,19 @@
         "name": "Geriatric medicine Doctor",
         "price": 500,
         "description": "Geriatric medicine doctors, also called geriatricians, focus on care for older adults.the aging process,preventive care for older adults,the diagnosis and treatmentof diseases and conditions that affect older adults"
+    },
+    {
+        "id": 4,
+        "image": "https://swiftype-ss.imgix.net/https%3A%2F%2Fmembers.physio-pedia.com%2Fwp-content%2Fuploads%2F2020%2F07%2FCommunity-Rehab-small.jpg?ixlib=rb-1.1.0&h=320&fit=clip&dpr=2.0&s=f2c4c1d0566cc3234907179a79f0dc74",
+        "name": "community Based Rehabilitation",
+        "price": 500,
+        "description": "The establishment of an individualized plan of treatment with input from the patient and the patient's caregivers.Individualized training and instruction to patients and the caregivers."
+    },
+    {
+        "id": 5,
+        "image": "https://assets-global.website-files.com/5bfd5ccdddc00c144ef694a4/5c0adbe6b9e51886c25936bc_shutterstock_106871048_hv8g6.jpeg",
+        "name": "Health Archive Doctor",
+        "price": 600,
+        "description": " This is to provide clinical support to patient by physicians visiting patient’s home and giving required treatment and advice. In case of long term case management, doctor will provide the patient. ."
     }
 ]
