@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendEmailVerification, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import GoogleLogin from '../GoogleLogin/GoogleLogin';
@@ -32,6 +32,9 @@ const Login = () => {
         event.preventDefault();
         signInWithEmailAndPassword(email, password)
     }
+
+
+
     return (
         <div>
             <h2 className='text-primary text-center'> please Login</h2>

@@ -1,5 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import About from './Pages/Blog/About/About';
+import Blogs from './Pages/Blog/Blogs/Blogs';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
@@ -17,6 +19,8 @@ function App() {
         <Route path='/login' element={<Login> </Login>}>Login</Route>
         <Route path='/checkout' element={<RequireAuth><CheckOut></CheckOut></RequireAuth>}>Login</Route>
         <Route path='/register' element={<Register></Register>}>Login</Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/about' element={<About></About>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
