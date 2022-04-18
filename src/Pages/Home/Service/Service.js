@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Service.css';
 
 const Service = ({ service }) => {
@@ -10,7 +11,7 @@ const Service = ({ service }) => {
             <p>price:{price}</p>
             <p>{description}</p>
             <button className='check-btn'>
-                <p>CheckOut</p>
+                <Link to='/checkout'>CheckOut</Link>
             </button>
         </div>
     );

@@ -18,3 +18,8 @@
 .check-btn p {
     text-align: center;
 }
+
+.check-btn a {
+    text-decoration: none;
+    color: white;
+}
