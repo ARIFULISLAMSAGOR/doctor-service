@@ -4,4 +4,4 @@
 •adding login and register page.<br/>
 •adding checkout page. <br/>
 •adding blog,about page and NotFound page. <br/>
- live website link:
+ live website link: https://doctor-service-provider-329be.web.app;
