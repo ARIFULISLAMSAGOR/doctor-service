@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import GoogleLogin from '../GoogleLogin/GoogleLogin';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -14,6 +15,8 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const location = useLocation();
+    const from = location.state?.from?.pathnam || '/home';
 
     const handleEmailBlur = event => {
         setEmail(event.target.value)
@@ -23,7 +26,7 @@ const Login = () => {
     }
 
     if (user) {
-        navigate('/home');
+        navigate(from, { replace: true });
     }
     const handleUserSignIn = event => {
         event.preventDefault();
@@ -55,6 +58,7 @@ const Login = () => {
                     </Button>
                 </Form>
                 <p>New to Doctor service?<Link className='text-danger text-decoration-none' to='/register'>please Register!!</Link></p>
+                <GoogleLogin></GoogleLogin>
             </div>
 
         </div>
