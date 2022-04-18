@@ -1,3 +1,4 @@
+ Doctor service. <br/>
 •adding navbar,banner in home page. <br/>
 •adding service section in home page. <br/>
 •adding login and register page.<br/>

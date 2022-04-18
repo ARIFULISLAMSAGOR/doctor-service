@@ -46,9 +46,6 @@ const Register = () => {
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" required />
-                        <Form.Text className="text-muted">
-                            We'll never share your email with anyone else.
-                        </Form.Text>
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -58,9 +55,6 @@ const Register = () => {
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Confirm Password</Form.Label>
                         <Form.Control onBlur={handleConfirmPasswordBlur} type="password" placeholder="confirmPassword" required />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Check me out" />
                     </Form.Group>
                     <p style={{ color: "red" }}>{error}</p>
                     <Button variant="primary" type="submit">

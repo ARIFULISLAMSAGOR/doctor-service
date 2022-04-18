@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSendEmailVerification, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -37,12 +37,12 @@ const Login = () => {
     }
 
     const resetPassword = async (event) => {
-        const email = handleEmailBlur;
+        const email = setEmail(event.target.value);
         if (email) {
-            await sendPasswordResetEmail();
+            await sendPasswordResetEmail(email);
             toast('Sent email');
         }
-        else if (!email) {
+        else {
             toast('please enter your email')
         }
     }
@@ -55,17 +55,11 @@ const Login = () => {
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" required />
-                        <Form.Text className="text-muted">
-                            We'll never share your email with anyone else.
-                        </Form.Text>
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
                         <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" required />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Check me out" />
                     </Form.Group>
                     <p style={{ color: "red" }}>{error?.message}</p>
                     <Button variant="primary" type="submit">
